@@ -3,6 +3,9 @@ using Newtonsoft.Json.Linq;
 
 namespace FinAssist.API.Controllers;
 
+/// <summary>
+/// Controlador responsável pela consulta de taxas de câmbio.
+/// </summary>
 [ApiController]
 [Route("api/[controller]")]
 public class CambioController : ControllerBase
@@ -14,17 +17,26 @@ public class CambioController : ControllerBase
         _httpFactory = httpFactory;
     }
 
+    /// <summary>
+    /// Consulta a taxa atual do dólar (USD) em relação ao real (BRL).
+    /// </summary>
     [HttpGet("usd-to-brl")]
     public async Task<IActionResult> GetUsdToBrl()
     {
         var client = _httpFactory.CreateClient();
-        // Exemplo de endpoint público sem API key
         var url = "https://open.er-api.com/v6/latest/USD";
         var res = await client.GetAsync(url);
         if (!res.IsSuccessStatusCode) return StatusCode((int)res.StatusCode, "Erro ao consultar câmbio");
+
         var text = await res.Content.ReadAsStringAsync();
         var json = JObject.Parse(text);
         var rate = json["rates"]?["BRL"]?.Value<decimal>() ?? 0m;
-        return Ok(new { baseCurrency = "USD", target = "BRL", rate });
+        return Ok(new
+        {
+            baseCurrency = "USD",
+            target = "BRL",
+            rate,
+            updated = DateTime.UtcNow
+        });
     }
 }

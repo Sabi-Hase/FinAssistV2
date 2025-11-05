@@ -1,23 +1,25 @@
 using Microsoft.AspNetCore.Mvc;
-using FinAssist.Shared.Models;
 
 namespace FinAssist.API.Controllers;
 
+/// <summary>
+/// Controlador responsável por interações de recomendação e análise de risco (simulação).
+/// </summary>
 [ApiController]
 [Route("api/[controller]")]
 public class ChatController : ControllerBase
 {
-    // Este endpoint simula uma resposta de recomendação/triagem.
-    // Para integrar com OpenAI, alterar o método para chamar a API real com a chave.
-
+    /// <summary>
+    /// Simula uma recomendação de comportamento financeiro com base em dados enviados.
+    /// Placeholder - integraria com Azure OpenAI para análise real.
+    /// </summary>
     [HttpPost("recommendation")]
     public IActionResult Recommendation([FromBody] dynamic payload)
     {
-        // payload pode incluir histórico de despesas, valor médio gasto, etc.
-        // Aqui retornamos uma resposta simples e segura para demo.
-        var resp = new {
-            message = "Com base nos dados fornecidos, detectamos padrões de risco moderado. Recomendamos reduzir apostas em 30% e procurar suporte profissional.",
-            actions = new[] { "Agendar consulta", "Ativar bloqueio temporário de apostas", "Receber material educativo" }
+        var resp = new
+        {
+            message = "Com base nos dados fornecidos, detectamos padrões de risco moderado. Recomendamos reduzir gastos e buscar orientação profissional.",
+            actions = new[] { "Agendar consulta", "Ativar bloqueio temporário", "Receber material educativo" }
         };
         return Ok(resp);
     }

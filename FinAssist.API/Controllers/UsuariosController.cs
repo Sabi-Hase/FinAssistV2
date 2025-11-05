@@ -5,6 +5,9 @@ using FinAssist.Shared.Models;
 
 namespace FinAssist.API.Controllers;
 
+/// <summary>
+/// Controlador responsável pelo gerenciamento de usuários.
+/// </summary>
 [ApiController]
 [Route("api/[controller]")]
 public class UsuariosController : ControllerBase
@@ -16,6 +19,9 @@ public class UsuariosController : ControllerBase
         _context = context;
     }
 
+    /// <summary>
+    /// Retorna todos os usuários cadastrados, incluindo suas despesas.
+    /// </summary>
     [HttpGet]
     public async Task<ActionResult<IEnumerable<Usuario>>> GetAll()
     {
@@ -24,6 +30,10 @@ public class UsuariosController : ControllerBase
             .ToListAsync();
     }
 
+    /// <summary>
+    /// Retorna um usuário específico pelo seu ID.
+    /// </summary>
+    /// <param name="id">ID do usuário.</param>
     [HttpGet("{id}")]
     public async Task<ActionResult<Usuario>> GetById(int id)
     {
@@ -34,6 +44,9 @@ public class UsuariosController : ControllerBase
         return Ok(user);
     }
 
+    /// <summary>
+    /// Cadastra um novo usuário.
+    /// </summary>
     [HttpPost]
     public async Task<ActionResult<Usuario>> Create([FromBody] Usuario user)
     {
@@ -43,6 +56,9 @@ public class UsuariosController : ControllerBase
         return CreatedAtAction(nameof(GetById), new { id = user.Id }, user);
     }
 
+    /// <summary>
+    /// Atualiza os dados de um usuário existente.
+    /// </summary>
     [HttpPut("{id}")]
     public async Task<IActionResult> Update(int id, [FromBody] Usuario user)
     {
@@ -54,6 +70,9 @@ public class UsuariosController : ControllerBase
         return NoContent();
     }
 
+    /// <summary>
+    /// Exclui um usuário existente.
+    /// </summary>
     [HttpDelete("{id}")]
     public async Task<IActionResult> Delete(int id)
     {

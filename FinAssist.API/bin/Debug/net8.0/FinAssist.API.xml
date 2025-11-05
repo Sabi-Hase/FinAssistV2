@@ -4,6 +4,112 @@
         <name>FinAssist.API</name>
     </assembly>
     <members>
+        <member name="T:FinAssist.API.Controllers.CambioController">
+            <summary>
+            Controlador responsável pela consulta de taxas de câmbio.
+            </summary>
+        </member>
+        <member name="M:FinAssist.API.Controllers.CambioController.GetUsdToBrl">
+            <summary>
+            Consulta a taxa atual do dólar (USD) em relação ao real (BRL).
+            </summary>
+        </member>
+        <member name="T:FinAssist.API.Controllers.ChatController">
+            <summary>
+            Controlador responsável por interações de recomendação e análise de risco (simulação).
+            </summary>
+        </member>
+        <member name="M:FinAssist.API.Controllers.ChatController.Recommendation(System.Object)">
+            <summary>
+            Simula uma recomendação de comportamento financeiro com base em dados enviados.
+            Placeholder - integraria com Azure OpenAI para análise real.
+            </summary>
+        </member>
+        <member name="T:FinAssist.API.Controllers.DespesasController">
+            <summary>
+            Controlador responsável pelo gerenciamento das despesas.
+            </summary>
+        </member>
+        <member name="M:FinAssist.API.Controllers.DespesasController.GetAll">
+            <summary>
+            Retorna todas as despesas cadastradas, incluindo os dados do usuário relacionado.
+            </summary>
+            <returns>Lista de despesas com informações do usuário.</returns>
+        </member>
+        <member name="M:FinAssist.API.Controllers.DespesasController.GetById(System.Int32)">
+            <summary>
+            Retorna uma despesa específica pelo seu ID.
+            </summary>
+            <param name="id">ID da despesa desejada.</param>
+            <returns>Objeto despesa correspondente, se encontrado.</returns>
+        </member>
+        <member name="M:FinAssist.API.Controllers.DespesasController.GetByUsuario(System.Int32)">
+            <summary>
+            Retorna todas as despesas de um usuário específico.
+            </summary>
+            <param name="usuarioId">ID do usuário.</param>
+            <returns>Lista de despesas associadas ao usuário informado.</returns>
+        </member>
+        <member name="M:FinAssist.API.Controllers.DespesasController.ResumoPorUsuario">
+            <summary>
+            Retorna um resumo das despesas agrupadas por usuário,
+            mostrando o total gasto e a quantidade de despesas registradas.
+            </summary>
+            <returns>Lista com total e quantidade de despesas por usuário.</returns>
+        </member>
+        <member name="M:FinAssist.API.Controllers.DespesasController.Create(FinAssist.Shared.Models.Despesa)">
+            <summary>
+            Cadastra uma nova despesa.
+            </summary>
+            <param name="despesa">Objeto despesa a ser criado.</param>
+            <returns>Despesa criada, com ID atribuído.</returns>
+        </member>
+        <member name="M:FinAssist.API.Controllers.DespesasController.Update(System.Int32,FinAssist.Shared.Models.Despesa)">
+            <summary>
+            Atualiza uma despesa existente.
+            </summary>
+            <param name="id">ID da despesa a ser atualizada.</param>
+            <param name="despesa">Objeto despesa com os novos dados.</param>
+            <returns>Status da operação.</returns>
+        </member>
+        <member name="M:FinAssist.API.Controllers.DespesasController.Delete(System.Int32)">
+            <summary>
+            Exclui uma despesa pelo seu ID.
+            </summary>
+            <param name="id">ID da despesa a ser excluída.</param>
+            <returns>Status da exclusão.</returns>
+        </member>
+        <member name="T:FinAssist.API.Controllers.UsuariosController">
+            <summary>
+            Controlador responsável pelo gerenciamento de usuários.
+            </summary>
+        </member>
+        <member name="M:FinAssist.API.Controllers.UsuariosController.GetAll">
+            <summary>
+            Retorna todos os usuários cadastrados, incluindo suas despesas.
+            </summary>
+        </member>
+        <member name="M:FinAssist.API.Controllers.UsuariosController.GetById(System.Int32)">
+            <summary>
+            Retorna um usuário específico pelo seu ID.
+            </summary>
+            <param name="id">ID do usuário.</param>
+        </member>
+        <member name="M:FinAssist.API.Controllers.UsuariosController.Create(FinAssist.Shared.Models.Usuario)">
+            <summary>
+            Cadastra um novo usuário.
+            </summary>
+        </member>
+        <member name="M:FinAssist.API.Controllers.UsuariosController.Update(System.Int32,FinAssist.Shared.Models.Usuario)">
+            <summary>
+            Atualiza os dados de um usuário existente.
+            </summary>
+        </member>
+        <member name="M:FinAssist.API.Controllers.UsuariosController.Delete(System.Int32)">
+            <summary>
+            Exclui um usuário existente.
+            </summary>
+        </member>
         <member name="T:FinAssist.API.Migrations.InitialCreate">
             <inheritdoc />
         </member>

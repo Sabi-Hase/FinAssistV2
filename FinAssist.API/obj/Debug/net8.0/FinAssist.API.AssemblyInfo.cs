@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FinAssist.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9c914097b86f32c18dc6e135c71ec77325c7037e")]
 [assembly: System.Reflection.AssemblyProductAttribute("FinAssist.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FinAssist.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

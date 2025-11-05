@@ -140,3 +140,4 @@ C:\Users\pc\Desktop\FinAssistV2\FinAssist.API\obj\Debug\net8.0\FinAssist.API.xml
 C:\Users\pc\Desktop\FinAssistV2\FinAssist.API\obj\Debug\net8.0\FinAssist.API.pdb
 C:\Users\pc\Desktop\FinAssistV2\FinAssist.API\obj\Debug\net8.0\FinAssist.API.genruntimeconfig.cache
 C:\Users\pc\Desktop\FinAssistV2\FinAssist.API\obj\Debug\net8.0\ref\FinAssist.API.dll
+C:\Users\pc\Desktop\FinAssistV2\FinAssist.API\obj\Debug\net8.0\FinAssist.API.sourcelink.json
