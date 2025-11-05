@@ -1,0 +1,75 @@
+﻿@page
+@model FinAssist.Web.Pages.IndexModel
+@{
+    ViewData["Title"] = "FinAssist - Dashboard";
+}
+
+<h1 class="text-center mb-4">FinAssist Dashboard</h1>
+
+<!-- Usuários -->
+<section class="mb-5">
+    <h2>Usuários</h2>
+    @if (Model.Usuarios != null && Model.Usuarios.Any())
+    {
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nome</th>
+                    <th>Email</th>
+                    <th>Criado em</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var u in Model.Usuarios)
+                {
+                    <tr>
+                        <td>@u.Id</td>
+                        <td>@u.Nome</td>
+                        <td>@u.Email</td>
+                        <td>@u.CriadoEm.ToString("dd/MM/yyyy HH:mm")</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+    else
+    {
+        <p>Nenhum usuário encontrado.</p>
+    }
+</section>
+
+<!-- Despesas -->
+<section>
+    <h2>Despesas</h2>
+    @if (Model.Despesas != null && Model.Despesas.Any())
+    {
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Descrição</th>
+                    <th>Valor</th>
+                    <th>Data</th>
+                    <th>Usuário</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var d in Model.Despesas)
+                {
+                    <tr>
+                        <td>@d.Id</td>
+                        <td>@d.Descricao</td>
+                        <td>R$ @d.Valor.ToString("N2")</td>
+                        <td>@d.Data.ToString("dd/MM/yyyy")</td>
+                        <td>@d.Usuario?.Nome</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+    else
+    {
+        <p>Nenhuma despesa encontrada.</p>
+    }
+</section>

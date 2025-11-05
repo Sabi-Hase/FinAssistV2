@@ -1,0 +1,11 @@
+C:\Users\pc\Desktop\FinAssistV2\FinAssist.Shared\bin\Debug\net8.0\FinAssist.Shared.deps.json
+C:\Users\pc\Desktop\FinAssistV2\FinAssist.Shared\bin\Debug\net8.0\FinAssist.Shared.dll
+C:\Users\pc\Desktop\FinAssistV2\FinAssist.Shared\bin\Debug\net8.0\FinAssist.Shared.pdb
+C:\Users\pc\Desktop\FinAssistV2\FinAssist.Shared\obj\Debug\net8.0\FinAssist.Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\pc\Desktop\FinAssistV2\FinAssist.Shared\obj\Debug\net8.0\FinAssist.Shared.AssemblyInfoInputs.cache
+C:\Users\pc\Desktop\FinAssistV2\FinAssist.Shared\obj\Debug\net8.0\FinAssist.Shared.AssemblyInfo.cs
+C:\Users\pc\Desktop\FinAssistV2\FinAssist.Shared\obj\Debug\net8.0\FinAssist.Shared.csproj.CoreCompileInputs.cache
+C:\Users\pc\Desktop\FinAssistV2\FinAssist.Shared\obj\Debug\net8.0\FinAssist.Shared.dll
+C:\Users\pc\Desktop\FinAssistV2\FinAssist.Shared\obj\Debug\net8.0\refint\FinAssist.Shared.dll
+C:\Users\pc\Desktop\FinAssistV2\FinAssist.Shared\obj\Debug\net8.0\FinAssist.Shared.pdb
+C:\Users\pc\Desktop\FinAssistV2\FinAssist.Shared\obj\Debug\net8.0\ref\FinAssist.Shared.dll
